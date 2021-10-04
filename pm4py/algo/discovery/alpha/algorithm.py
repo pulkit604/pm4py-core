@@ -41,12 +41,14 @@ class Parameters(Enum):
 class Variants(Enum):
     ALPHA_VERSION_CLASSIC = variants.classic
     ALPHA_VERSION_PLUS = variants.plus
+    ALPHA_VERSION_ALPHAF = variants.alphaf
 
 
 ALPHA_VERSION_CLASSIC = Variants.ALPHA_VERSION_CLASSIC
 ALPHA_VERSION_PLUS = Variants.ALPHA_VERSION_PLUS
+ALPHA_VERSION_ALPHAF = Variants.ALPHA_VERSION_ALPHAF
 DEFAULT_VARIANT = ALPHA_VERSION_CLASSIC
-VERSIONS = {Variants.ALPHA_VERSION_CLASSIC, Variants.ALPHA_VERSION_PLUS}
+VERSIONS = {Variants.ALPHA_VERSION_CLASSIC, Variants.ALPHA_VERSION_PLUS, Variants.ALPHA_VERSION_ALPHAF}
 
 
 def apply(log: Union[EventLog, EventStream, pd.DataFrame], parameters: Optional[Dict[Union[str, Parameters], Any]] = None, variant=DEFAULT_VARIANT) -> Tuple[PetriNet, Marking, Marking]:
