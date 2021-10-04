@@ -305,7 +305,7 @@ def processing(log: EventLog, causal: Tuple[str, str], follows: Tuple[str, str])
             if get_sharp_relation(follows, key, key):
                 if get_sharp_relation(follows, item, item):
                     pairs.append(({key}, {item}))
-
+    print(pairs)
     # combining pairs
     for i in range(0, len(pairs)):
         t1 = pairs[i]
