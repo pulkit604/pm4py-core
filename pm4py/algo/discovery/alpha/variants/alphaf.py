@@ -475,7 +475,7 @@ def apply(trace_log: EventLog, parameters: Optional[Dict[Union[str, Parameters],
 
     # deep copy the log object because otherwise the original log would be modified with
     # artificial start/end activities
-    #trace_log = deepcopy(trace_log)
+    trace_log = deepcopy(trace_log)
 
     remove_unconnected = exec_utils.get_param_value(Parameters.REMOVE_UNCONNECTED, parameters, False)
 
