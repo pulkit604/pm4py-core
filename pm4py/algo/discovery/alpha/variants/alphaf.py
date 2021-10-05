@@ -65,7 +65,7 @@ def preprocessing(log: EventLog, parameters: Optional[Dict[Union[str, Parameters
     # inserting artificial start and end activity, since it is not allowed to have a loop at the source place
     # (according to paper)
     for trace in log:
-        trace.insert(0, {activity_key: 'artificial_start'})
+        trace.insert(0, {activity_key: 'tender choose package'})
         trace.append({activity_key: 'artificial_end'})
     for trace in log:
         i = 0
@@ -331,8 +331,6 @@ def processing(log: EventLog, causal: Tuple[str, str], follows: Tuple[str, str])
             label_transition_dict[label] = PetriNet.Transition(label, None)
             net.transitions.add(label_transition_dict[label])
     # and source and sink
-    print(type(start_activities), start_activities)
-    print(type(start_activities.add('tender choose pacakge')), start_activities.add('tender choose pacakge'))
     src = add_source(net, start_activities, label_transition_dict)
     sink = add_sink(net, end_activities, label_transition_dict)
     print(net, start_activities, label_transition_dict, end_activities)
