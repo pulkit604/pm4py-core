@@ -66,6 +66,7 @@ def preprocessing(log: EventLog, parameters: Optional[Dict[Union[str, Parameters
     # (according to paper)
     for trace in log:
         trace.insert(0, {activity_key: 'tender choose package'})
+        trace.insert(1, {activity_key: 'more info tender package'})
         trace.append({activity_key: 'artificial_end'})
     for trace in log:
         i = 0
