@@ -65,7 +65,6 @@ def preprocessing(log: EventLog, parameters: Optional[Dict[Union[str, Parameters
     # inserting artificial start and end activity, since it is not allowed to have a loop at the source place
     # (according to paper)
     for trace in log:
-        trace.insert(0, {activity_key: 'artificial_start'})
         trace.append({activity_key: 'artificial_end'})
     for trace in log:
         i = 0
