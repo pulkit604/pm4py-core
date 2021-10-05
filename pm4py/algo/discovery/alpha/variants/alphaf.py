@@ -331,7 +331,7 @@ def processing(log: EventLog, causal: Tuple[str, str], follows: Tuple[str, str])
             label_transition_dict[label] = PetriNet.Transition(label, None)
             net.transitions.add(label_transition_dict[label])
     # and source and sink
-    src = add_source(net, start_activities.add(trace.__getitem__(5)), label_transition_dict)
+    src = add_source(net, start_activities.add('navigation get premium'), label_transition_dict)
     sink = add_sink(net, end_activities, label_transition_dict)
     print(net, start_activities, label_transition_dict, end_activities)
     # create places
