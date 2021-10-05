@@ -333,6 +333,7 @@ def processing(log: EventLog, causal: Tuple[str, str], follows: Tuple[str, str])
     # and source and sink
     src = add_source(net, start_activities, label_transition_dict)
     sink = add_sink(net, end_activities, label_transition_dict)
+    print(net, start_activities, label_transition_dict, end_activities)
     # create places
     for pair in cleaned_pairs:
         place = PetriNet.Place(str(pair))
