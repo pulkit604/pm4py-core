@@ -491,6 +491,7 @@ def apply(trace_log: EventLog, parameters: Optional[Dict[Union[str, Parameters],
     if remove_unconnected:
         net = remove_unconnected_transitions(net)
 
+    print(filtered_log, loop_one_list, A_filtered, B_filtered, loops_in_first, loops_in_last)
     return net, initial_marking, final_marking
 
 
