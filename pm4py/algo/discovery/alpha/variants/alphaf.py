@@ -332,7 +332,7 @@ def processing(log: EventLog, causal: Tuple[str, str], follows: Tuple[str, str])
             net.transitions.add(label_transition_dict[label])
     # and source and sink
     print(type(start_activities), start_activities)
-    print(type(start_activities.add('navigation get premium')), start_activities.add('navigation get premium'))
+    print(type(start_activities.add('tender choose pacakge')), start_activities.add('tender choose pacakge'))
     src = add_source(net, start_activities, label_transition_dict)
     sink = add_sink(net, end_activities, label_transition_dict)
     print(net, start_activities, label_transition_dict, end_activities)
